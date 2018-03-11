@@ -1,0 +1,30 @@
+/**
+ * This file provides the specific dokiwiki styles.
+ */
+
+#dokuwiki__header {
+    margin-top: 4em;
+}
+
+#dw__toc {
+    float: none;
+    width: auto;
+    background-color: #fff;
+    padding: 0px 30px 15px;
+    color: inherit;
+    margin: 0;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+.icon {
+    padding-right: 10px;
+}
+
+#config__manager fieldset {
+    background-color: #f8f8f8;
+}
+
+#config__manager tr.default .input, #config__manager tr.default input, #config__manager tr.default textarea, #config__manager tr.default select, #config__manager .selectiondefault {
+    background-color: #fff;
+}

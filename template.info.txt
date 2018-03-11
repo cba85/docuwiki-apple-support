@@ -1,0 +1,7 @@
+base     apple-support
+author   Clément Barbaza
+email    hello@clementbarbaza.com
+date     2018-03-11
+name     Apple Support
+desc     A template based on Apple Support
+url      https://www.dokuwiki.org/template:apple-support

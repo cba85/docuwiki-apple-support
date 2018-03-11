@@ -1,0 +1,134 @@
+/**
+ * This file provides the most basic styles.
+ */
+
+ body {
+    margin: 1em auto;
+    padding: 0 1em;
+    max-width: 980px;
+    font: 400 17px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #333;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+a {
+    color: #0070c9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.float-right {
+    float: right;
+}
+
+.inline > li {
+    display: inline;
+    padding-left: 10px;
+}
+
+/* Navbar */
+
+ nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    display: block;
+    margin: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    font-size: 17px;
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+
+  .nav-content {
+        margin: 0 auto;
+      max-width: 980px;
+      padding: 0 22px;
+      position: relative;
+      z-index: 2;
+  }
+
+  .nav-list {
+      padding-left: 0;
+      margin: 10px 0;
+  }
+
+  .nav-logo {
+    font-weight: bold;
+  }
+
+  .nav-item {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    margin-right: 10px;
+  }
+
+  .nav-link {
+    color: #fff;
+    }
+
+    .nav-link:hover {
+    text-decoration: none;
+    opacity:.65;
+    }
+
+  .nav-item > .action {
+      color: #fff;
+  }
+
+  .nav-item > .action:hover {
+    text-decoration: none;
+    opacity:.65;
+  }
+
+  /* Search */
+
+  .search > div > .edit {
+    border: 0;
+    padding: 7px;
+    background: transparent;
+    color: #fff;
+    margin-top: -5px;
+    font-size: 17px;
+}
+
+  .search > div > button {
+      display: none;
+  }

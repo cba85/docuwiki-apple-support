@@ -1,0 +1,44 @@
+/**
+ * This file provides the styles for printing.
+ */
+
+/* hide certain sections */
+audio,
+video,
+#dokuwiki__aside,
+#dokuwiki__footer,
+.dokuwiki .breadcrumbs,
+.dokuwiki .toc,
+#dokuwiki__header,
+#dw__toc {
+    display: none;
+}
+
+body {
+    font: 400 12px/1.5 Georgia, serif;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    border-bottom: 1pt dotted;
+    color: #333;
+    background-color: inherit;
+}
+
+/* code blocks */
+pre {
+    font-family: monospace;
+}
+
+/* images */
+img {
+    border-width: 0;
+    vertical-align: middle;
+}
