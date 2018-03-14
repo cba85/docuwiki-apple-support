@@ -25,51 +25,43 @@ $showSidebar = page_findnearest($conf['sidebar']);
 </head>
 
 <body id="dokuwiki__top">
-    <div id="dokuwiki__site" class="<?php echo tpl_classes(); ?> <?php echo ($showSidebar) ? 'hasSidebar' : ''; ?>">
+
+    <!-- NAVBAR -->
+    <div class="nav">
+        <strong><?php tpl_link(wl(),$conf['title'],'accesskey="h" title="[H]" class="nav-link"') ?></strong>
+        <span class="nav-mobile-hide">
+            <?php echo tpl_action('recent', 1, false, 1) ?>
+            <?php echo tpl_action('media', 1, false, 1) ?>
+            <?php echo tpl_action('index', 1, false, 1) ?>
+            <span class="nav-right">
+                <?php tpl_searchform() ?>
+                <?php echo tpl_action('admin', 1, false, 1) ?>
+                <?php echo tpl_action('profile', 1, false, 1) ?>
+                <?php echo tpl_action('register', 1, false, 1) ?>
+                <?php echo tpl_action('login', 1, false, 1) ?>
+            </span>
+        </span>
+    </div>
+
+    <div id="dokuwiki__site" class="content <?php echo tpl_classes(); ?> <?php echo ($showSidebar) ? 'hasSidebar' : ''; ?>">
         <?php html_msgarea() ?>
         <?php tpl_includeFile('header.html') ?>
 
         <!-- ********** HEADER ********** -->
         <div id="dokuwiki__header">
 
-        <nav>
-  <div class="nav-content">
-    <ul class="nav-list">
-      <li class="nav-item nav-logo"><?php tpl_link(wl(),$conf['title'],'accesskey="h" title="[H]" class="nav-link"') ?></li>
-      <li class="nav-item"><?php echo tpl_action('recent', 1, false, 1) ?></li>
-      <li class="nav-item"><?php echo tpl_action('media', 1, false, 1) ?></li>
-      <li class="nav-item"><?php echo tpl_action('index', 1, false, 1) ?></li>
-      <li class="nav-item float-right"><?php echo tpl_action('register', 1, false, 1) ?></li>
-      <li class="nav-item float-right"><?php echo tpl_action('login', 1, false, 1) ?></li>
-      <li class="nav-item float-right"><?php echo tpl_action('profile', 1, false, 1) ?></li>
-      <li class="nav-item float-right"><?php echo tpl_action('admin', 1, false, 1) ?></li>
-      <li class="nav-item float-right"><?php tpl_searchform() ?></li>
-    </ul>
-  </div>
-</nav>
-
-            <p class="a11y skip">
-                <a href="#dokuwiki__content"><?php echo $lang['skip_to_content'] ?></a>
-            </p>
-
             <!-- BREADCRUMBS -->
             <?php if($conf['breadcrumbs']){ ?>
-                <div class="breadcrumbs"><?php tpl_breadcrumbs() ?></div>
+                <?php tpl_breadcrumbs() ?>
             <?php } ?>
             <?php if($conf['youarehere']){ ?>
-                <div class="breadcrumbs"><?php tpl_youarehere() ?></div>
+                <?php tpl_youarehere() ?>
             <?php } ?>
-
-            <div>
-                <?php
-                    //$translation = plugin_load('helper','translation');
-                    //if ($translation) echo $translation->showTranslations();
-                    ?>
-                </div>
 
             <div class="text-right">
                 <ul class="inline">
-                <?php tpl_toolsevent('pagetools', array(
+                    <!-- <li><a href="#dokuwiki__content"><?php echo $lang['skip_to_content'] ?></a></li> -->
+                        <?php tpl_toolsevent('pagetools', array(
                             'edit'      => tpl_action('edit', 1, 'li', 1),
                             'revisions' => tpl_action('revisions', 1, 'li', 1),
                             'backlink'  => tpl_action('backlink', 1, 'li', 1),
@@ -110,7 +102,11 @@ $showSidebar = page_findnearest($conf['sidebar']);
 
         <!-- ********** FOOTER ********** -->
         <div id="dokuwiki__footer">
-            <div class="text-right"><small><?php tpl_pageinfo() ?></small> | <?php echo tpl_action('top', 1, false, 1) ?></div>
+            <div class="text-right">
+                <small><?php tpl_pageinfo() ?></small>
+                <br>
+                <?php echo tpl_action('top', 1, false, 1) ?>
+            </div>
 
         </div><!-- /footer -->
 

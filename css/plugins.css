@@ -1,3 +1,7 @@
+/**
+ * This file provides the styles for plugins.
+ */
+
 #plugin__upgrade_meter ol li.active {
     background-color: lightgreen;
 }

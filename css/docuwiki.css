@@ -3,7 +3,7 @@
  */
 
 #dokuwiki__header {
-    margin-top: 4em;
+    margin-top: 2em;
 }
 
 #dw__toc {
@@ -31,4 +31,14 @@
 
 #dw__toc ul li {
     list-style: inherit;
+}
+
+.search > div > .edit {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: #fff;
+    margin-top: 0;
+    width: 150px;
+    font-size: 17px;
 }
